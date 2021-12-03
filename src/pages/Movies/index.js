@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header';
 import { Container, ListMovies } from './styles';
-import {  getMoviesSave, deleteMovie } from '../../utils/storage';
+import { getMoviesSave, deleteMovie } from '../../utils/storage';
 import FavoriteItem from '../../components/FavoriteItem';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 
@@ -36,11 +36,12 @@ export default function Movies() {
         setMovies(result);
     }
 
-    async function navigateDetailsPage(item){
+    async function navigateDetailsPage(item) {
         navigation.navigate('Detail', { id: item.id })
     }
 
     return (
+
         <Container>
             <Header title="Meus Filmes" />
             <ListMovies
@@ -51,10 +52,11 @@ export default function Movies() {
                     <FavoriteItem
                         data={item}
                         deleteMovie={handleDelete}
-                        navigatePage={ () => navigateDetailsPage(item) }
+                        navigatePage={() => navigateDetailsPage(item)}
                     />
                 )}
             />
         </Container>
+
     )
 };

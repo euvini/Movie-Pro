@@ -86,7 +86,7 @@ export default function Home() {
     }
 
     function handleSearchMovie() {
-        if(input === '') return;
+        if (input === '') return;
 
         navigation.navigate('Search', { name: input })
         setInput('');
@@ -103,57 +103,56 @@ export default function Home() {
 
     return (
         <Container>
-            <Header title="Movie Pro" />
+                <Header title="Movie Pro" />
 
-            <SearchContainer>
-                <Input
-                    placeholder="Pesquise um filme"
-                    placeholderTextColor="#DDD"
-                    value={input}
-                    onChangeText={(text) => setInput(text)}
-                />
-                <SearchButton onPress={ handleSearchMovie }>
-                    <Feather name="search" size={30} color="#FFF" />
-                </SearchButton>
-            </SearchContainer>
-
-            <ScrollView showsVerticalScrollIndicator={false}>
-                <Title>Em Cartaz</Title>
-                <BannerButton activeOpacity={0.9} onPress={() => navigateDetailPage(bannerMovie)} >
-                    <Banner
-                        resizeMethod="resize"
-                        source={{ uri: `https://image.tmdb.org/t/p/original${bannerMovie.backdrop_path}` }}
+                <SearchContainer>
+                    <Input
+                        placeholder="Pesquise um filme"
+                        placeholderTextColor="#FFF"
+                        value={input}
+                        onChangeText={(text) => setInput(text)}
                     />
-                </BannerButton>
-                <SliderMovie
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}
-                    data={nowMovies}
-                    renderItem={({ item }) => <SliderItem data={item} navigatePage={() => navigateDetailPage(item)} />}
-                    keyExtrator={(item) => String(item.id)}
-                />
+                    <SearchButton onPress={handleSearchMovie}>
+                        <Feather name="search" size={30} color="#FFF" />
+                    </SearchButton>
+                </SearchContainer>
 
-                <Title>Populares</Title>
-                <SliderMovie
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}
-                    data={popularMovies}
-                    renderItem={({ item }) => <SliderItem data={item} navigatePage={() => navigateDetailPage(item)} />}
-                    keyExtrator={(item) => String(item.id)}
-                />
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    <Title>Em Cartaz</Title>
+                    <BannerButton activeOpacity={0.9} onPress={() => navigateDetailPage(bannerMovie)} >
+                        <Banner
+                            resizeMethod="resize"
+                            source={{ uri: `https://image.tmdb.org/t/p/original${bannerMovie.backdrop_path}` }}
+                        />
+                    </BannerButton>
+                    <SliderMovie
+                        horizontal={true}
+                        showsHorizontalScrollIndicator={false}
+                        data={nowMovies}
+                        renderItem={({ item }) => <SliderItem data={item} navigatePage={() => navigateDetailPage(item)} />}
+                        keyExtrator={(item) => String(item.id)}
+                    />
 
-                <Title>Mais Votados</Title>
-                <SliderMovie
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}
-                    data={topMovies}
-                    renderItem={({ item }) => <SliderItem data={item} navigatePage={() => navigateDetailPage(item)} />}
-                    keyExtrator={(item) => String(item.id)}
-                />
+                    <Title>Populares</Title>
+                    <SliderMovie
+                        horizontal={true}
+                        showsHorizontalScrollIndicator={false}
+                        data={popularMovies}
+                        renderItem={({ item }) => <SliderItem data={item} navigatePage={() => navigateDetailPage(item)} />}
+                        keyExtrator={(item) => String(item.id)}
+                    />
+
+                    <Title>Mais Votados</Title>
+                    <SliderMovie
+                        horizontal={true}
+                        showsHorizontalScrollIndicator={false}
+                        data={topMovies}
+                        renderItem={({ item }) => <SliderItem data={item} navigatePage={() => navigateDetailPage(item)} />}
+                        keyExtrator={(item) => String(item.id)}
+                    />
 
 
-            </ScrollView>
-
+                </ScrollView>
         </Container>
     )
 };

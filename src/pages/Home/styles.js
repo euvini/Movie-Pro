@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+import { LinearGradient } from 'expo-linear-gradient';
 
-export const Container = styled.SafeAreaView`
-    background-color: #141414;
+export const Container = styled(LinearGradient).attrs({
+    colors: ['#F3A4CF', '#D09FD4']
+})`
+    background-color: transparent;
     flex: 1;
-    padding: 4px 0;
-
+    padding: 30px 0;
 `;
 
 export const SearchContainer = styled.View`

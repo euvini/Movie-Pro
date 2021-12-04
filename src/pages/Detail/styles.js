@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 
 export const Container = styled.View `
 flex: 1;
-background-color: rgba(194, 69, 174, 0.5951);
+background-color: #2E003B;
 `;
 
 export const Header = styled.View `
@@ -33,7 +33,7 @@ border-bottom-right-radius: 60px;
 
 `;
 export const ButtonLink = styled.TouchableOpacity `
-background-color: #e72f49;
+background-color: #7A005A;
 width: 63px;
 height: 63px;
 border-radius: 35px;

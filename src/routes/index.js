@@ -3,6 +3,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import StackRoutes from "./stackRoutes";
 import Movies from "../pages/Movies";
+import { LinearGradient } from "expo-linear-gradient";
 
 const Drawer = createDrawerNavigator();
 
@@ -11,10 +12,10 @@ export default function Routes(){
         <Drawer.Navigator screenOptions={{
             headerShown: false,
             drawerStyle:{
-                backgroundColor: '#090A0E',
+                backgroundColor: '#121212',
                 paddingTop: 20,
             },
-            drawerActiveBackgroundColor: '#e72f49',
+            drawerActiveBackgroundColor: '#2E003B',
             drawerActiveTintColor: '#FFF',
             drawerInactiveTintColor: '#FFF',
             

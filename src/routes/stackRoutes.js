@@ -27,12 +27,12 @@ export default function StackRoutes() {
                 component={Search}
                 options={{
                     title: 'Pesquisa',
-                    headerTintColor: "#FFF",
+                    headerTintColor: "#fff",
                     headerTitleStyle: {
-                        backgroundColor: '#141a29'
+                        backgroundColor: '#2E003B'
                     },
                     headerStyle:{
-                        backgroundColor: '#141a29'
+                        backgroundColor: '#111111'
             }
                 }}
             />

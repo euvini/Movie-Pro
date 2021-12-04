@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { LinearGradient } from 'expo-linear-gradient'
 
 export const Container = styled(LinearGradient).attrs({
-    colors: ['#F3A4CF', '#D09FD4']
+    colors: ['#111111', '#2E003B']
 })`
     flex: 1;
 `;

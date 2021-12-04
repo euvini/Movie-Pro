@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export const Container = styled(LinearGradient).attrs({
-    colors: ['#F3A4CF', '#D09FD4']
+    colors: ['#2E003B', '#111111']
 })`
     background-color: transparent;
     flex: 1;
@@ -16,6 +16,7 @@ export const SearchContainer = styled.View`
     align-items: center;
     padding: 0 14px;
     margin-bottom: 8px;
+    margin-top: 10px;
 `;
 
 export const Input = styled.TextInput`
@@ -53,7 +54,7 @@ export const BannerButton = styled.TouchableOpacity`
 `;
 
 export const Banner = styled.Image`
-    height: 150px;
+    height: 190px;
     border-radius: 6px;
     margin: 0 14px;
 

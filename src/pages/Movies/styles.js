@@ -3,11 +3,11 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 
 export const Container = styled(LinearGradient).attrs({
-    colors: ['#F3A4CF', '#D09FD4']
+    colors: ['#121212', '#121212']
 })`
     flex: 1;
     padding: 30px 0;
 `;
 export const ListMovies = styled.FlatList`
-
+    margin-left: 4px;
 `;

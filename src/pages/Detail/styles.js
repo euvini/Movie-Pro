@@ -27,7 +27,7 @@ align-items: center;
 
 export const Banner = styled.Image `
 width: 100%;
-height: 400px;
+height: 45%;
 border-bottom-left-radius: 60px;
 border-bottom-right-radius: 60px;
 
@@ -38,7 +38,7 @@ width: 63px;
 height: 63px;
 border-radius: 35px;
 position: absolute;
-top: 350px;
+top: 40%;
 right: 10px;
 justify-content: center;
 align-items: center;

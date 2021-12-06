@@ -27,7 +27,8 @@
     "android": {
       "adaptiveIcon": {
         "package":"com.movie.moviepro",
-        "backgroundColor": "#111111"
+        "backgroundColor": "#111111",
+        "adaptiveIcon": "./assets/adaptive-icon.png"
       }
     }
   }
